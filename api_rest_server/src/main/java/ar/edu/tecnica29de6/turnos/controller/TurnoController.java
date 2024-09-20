@@ -29,8 +29,6 @@ public class TurnoController {
 
     @GetMapping("/fila")
     public List<Turno> obtenerFilaDeEspera() {
-    //public List<Turno> getFila() {
-    //public String getFila() {
     	System.out.println("obtenerFilaDeEspera()");
         return turnoService.obtenerFilaDeEspera();
     }

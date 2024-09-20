@@ -9,8 +9,8 @@
 		<version>3.3.3</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>ar.edu.etc</groupId>
-	<artifactId>tp_api_rest_server</artifactId>
+	<groupId>ar.edu.tecnica</groupId>
+	<artifactId>api_rest_server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>tp_api_rest_server</name>
 	<description>API REST server</description>

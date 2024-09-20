@@ -20,16 +20,13 @@ public class TurnoService {
         turno.setPendiente(1);
         turno.setLlamado(0);
         turno.setPuestoAtencionAsignado((int) (Math.random() * 10) + 1);  // Ejemplo: puesto aleatorio
+        System.out.println("turno: "+turno);
         return turnoRepository.save(turno);
     }
 
     public List<Turno> obtenerFilaDeEspera() {
         return turnoRepository.findByPendiente(1);
     }
-
-//    public List<Turno> getFilaEspera() {
-//        return turnoRepository.findAll();
-//    }
 
     public String atenderTurno(Long numeroTurno, int pendiente, int llamado) {
         Turno turno = turnoRepository.findById(numeroTurno).orElse(null);

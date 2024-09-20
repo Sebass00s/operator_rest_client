@@ -17,10 +17,10 @@ public class Turno {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long numeroTurno;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private LocalDateTime creacion;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private LocalDateTime fechaHoraTurno;
 
     public Long getNumeroTurno() {
