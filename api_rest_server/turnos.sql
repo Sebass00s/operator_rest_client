@@ -2,18 +2,22 @@ CREATE DATABASE turnos;
 
 USE turnos;
 
+DROP TABLE IF EXISTS turnos;
+
 CREATE TABLE turnos (
-    numero_turno BIGINT AUTO_INCREMENT PRIMARY KEY,
-    creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    fecha_hora_turno TIMESTAMP,
-    cuil CHAR(32) NOT NULL,
+CREATE TABLE turnos (
+    numero_turno BIGINT NOT NULL AUTO_INCREMENT,
+    creacion TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
+    fecha_hora_turno TIMESTAMP NULL DEFAULT NULL,
+    cuil VARCHAR(32) NOT NULL,
     nombre VARCHAR(100) NOT NULL,
     apellido VARCHAR(100) NOT NULL,
     puesto_atencion_asignado INT DEFAULT 0,
     pendiente INT DEFAULT 1,
-    llamado INT DEFAULT 0
+    llamado INT DEFAULT 0,
+    PRIMARY KEY (numero_turno)
 );
-
+);
 
 INSERT INTO turnos (creacion, fecha_hora_turno, cuil, nombre, apellido, puesto_atencion_asignado, pendiente, llamado)
 VALUES (NOW(), '2024-09-13 10:00:00', '20-12345678-9', 'Juan', 'Pérez', 1, 1, 0);
