@@ -5,7 +5,6 @@ USE turnos;
 DROP TABLE IF EXISTS turnos;
 
 CREATE TABLE turnos (
-CREATE TABLE turnos (
     numero_turno BIGINT NOT NULL AUTO_INCREMENT,
     creacion TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
     fecha_hora_turno TIMESTAMP NULL DEFAULT NULL,
@@ -16,7 +15,6 @@ CREATE TABLE turnos (
     pendiente INT DEFAULT 1,
     llamado INT DEFAULT 0,
     PRIMARY KEY (numero_turno)
-);
 );
 
 INSERT INTO turnos (creacion, fecha_hora_turno, cuil, nombre, apellido, puesto_atencion_asignado, pendiente, llamado)
